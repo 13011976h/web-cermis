@@ -12,7 +12,6 @@
     <link rel="canonical" href="https://cermis.pages.dev/">
     <link rel="icon" href="icon.png">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cermis Audio">
     <meta property="og:description" content="Kumpulan cerita horor, misteri, dan legenda lengkap dengan audio streaming.">
@@ -20,72 +19,293 @@
     <meta property="og:url" content="https://cermis.pages.dev/">
     <meta property="og:site_name" content="Cermis Audio">
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cermis Audio">
     <meta name="twitter:description" content="Cerita horor dan misteri lengkap dengan audio streaming.">
     <meta name="twitter:image" content="https://cermis.pages.dev/banner.jpg">
 
-    <!-- Structured Data (Akan diisi dinamis oleh JavaScript) -->
     <script type="application/ld+json" id="ld-json-schema"></script>
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Inter, Segoe UI, Arial, sans-serif; background: #ffffff; color: #111827; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
-        .hero { text-align: center; padding: 80px 20px 60px; }
-        .logo { width: 120px; height: 120px; border-radius: 28px; box-shadow: 0 15px 35px rgba(0,0,0,.12); }
-        h1 { margin-top: 25px; font-size: 48px; font-weight: 700; }
-        .subtitle { max-width: 700px; margin: 20px auto; color: #6b7280; font-size: 20px; line-height: 1.7; }
-        .download-btn { display: inline-block; margin-top: 30px; background: #2563eb; color: #fff; text-decoration: none; padding: 16px 34px; border-radius: 14px; font-size: 18px; font-weight: 600; transition: .2s; }
-        .download-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
-        .version { margin-top: 15px; color: #6b7280; }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { border: 1px solid #e5e7eb; border-radius: 20px; padding: 25px; background: #fff; }
-        .card h2 { margin-bottom: 12px; font-size: 20px; }
-        .card p { color: #6b7280; line-height: 1.7; }
-        .features { margin-top: 60px; text-align: center; }
-        .features h2 { font-size: 34px; margin-bottom: 20px; }
-        .feature-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 30px; }
-        .feature { padding: 20px; border: 1px solid #e5e7eb; border-radius: 16px; }
-        .footer { margin-top: 80px; border-top: 1px solid #e5e7eb; padding: 30px; text-align: center; color: #6b7280; }
-        .footer a { color: #2563eb; text-decoration: none; }
-        @media(max-width: 768px) { h1 { font-size: 36px; } .subtitle { font-size: 17px; } .download-btn { width: 100%; max-width: 320px; } }
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-accent: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            background: #ffffff;
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px 80px;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 28px;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            color: #0f172a;
+            line-height: 1.15;
+        }
+
+        .subtitle {
+            max-width: 680px;
+            margin: 24px auto 36px;
+            color: var(--text-muted);
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            padding: 18px 38px;
+            border-radius: 16px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+            transition: all 0.25s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            background: var(--primary-hover);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .version {
+            margin-top: 20px;
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        /* Cards Grid */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 32px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+        }
+
+        .card h2 {
+            margin-bottom: 14px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.65;
+        }
+
+        /* Features Section */
+        .features {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .features h2, .install-guide h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 40px;
+        }
+
+        .feature {
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            font-weight: 600;
+            color: #334155;
+            background: var(--bg-accent);
+        }
+
+        /* Modern Install Guide */
+        .install-guide {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .guide-box {
+            max-width: 680px;
+            margin: 40px auto 0;
+            text-align: left;
+            background: var(--bg-accent);
+            border: 1px solid var(--border-color);
+            padding: 36px;
+            border-radius: 28px;
+        }
+
+        .guide-step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .guide-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--primary);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .step-text {
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .step-text strong {
+            color: #0f172a;
+        }
+
+        .warning-badge {
+            display: inline-block;
+            background: #fef2f2;
+            color: #ef4444;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 120px;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Layout */
+        @media(max-width: 768px) {
+            .hero { padding: 60px 10px 50px; }
+            h1 { font-size: 38px; }
+            .subtitle { font-size: 17px; }
+            .download-btn { width: 100%; max-width: 340px; padding: 16px 24px; }
+            .card { padding: 24px; }
+            .guide-box { padding: 24px; border-radius: 24px; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <section class="hero">
-        <img src="icon.png" alt="Cermis Audio" class="logo">
+        <div class="logo-wrapper">
+            <img src="icon.png" alt="Logo Cermis Audio" class="logo">
+        </div>
         <h1>Cermis Audio</h1>
         <p class="subtitle">
             Masuki dunia penuh misteri, legenda, dan kisah-kisah yang membuat bulu kuduk merinding. Nikmati pengalaman membaca dan mendengarkan cerita pilihan langsung dari perangkat Android Anda.
         </p>
         
-        <!-- Link download dinamis -->
         <a id="apk-download-link" class="download-btn" href="#" target="_blank" rel="noopener noreferrer">
             Download APK
         </a>
 
-        <!-- Info versi dinamis -->
         <div class="version" id="apk-version-info">
-            Memuat informasi versi...
+            Memuat versi aplikasi...
         </div>
     </section>
 
     <div class="cards">
         <div class="card">
             <h2>📚 Koleksi Cerita</h2>
-            <p>Ratusan cerita misteri, horor, urban legend, dan kisah menyeramkan yang dapat dinikmati kapan saja.</p>
+            <p>Ratusan cerita misteri, horor, urban legend, dan kisah menyeramkan yang dapat dinikmati kapan saja tanpa perlu ribet.</p>
         </div>
         <div class="card">
             <h2>🎧 Audio Streaming</h2>
-            <p>Dengarkan cerita favorit secara langsung dengan pemutar audio yang ringan dan mudah digunakan.</p>
+            <p>Dengarkan cerita favorit secara langsung dengan pemutar audio internal yang sangat hemat kuota, jernih, dan ringan.</p>
         </div>
         <div class="card">
             <h2>⚡ Cepat & Ringan</h2>
-            <p>Dirancang agar tetap nyaman digunakan pada berbagai perangkat Android.</p>
+            <p>Dirancang khusus tanpa sistem database berat agar tetap berjalan lancar dan mulus di berbagai spesifikasi ponsel Android.</p>
         </div>
     </div>
 
@@ -101,6 +321,41 @@
         </div>
     </section>
 
+    <section class="install-guide">
+        <h2>Panduan Instalasi APK</h2>
+        <div class="guide-box">
+            
+            <div class="guide-step">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <strong>Unduh File:</strong> Tekan tombol "Download APK" di atas. Jika browser memunculkan peringatan <em>"File mungkin berbahaya"</em>, pilih saja <strong>Tetap Download</strong>.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <strong>Buka File:</strong> Setelah proses download selesai, buka file APK tersebut melalui panel notifikasi atau folder Download HP Anda.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <strong>Konfirmasi Sistem Keamanan:</strong> Ketika muncul kotak dialog keamanan Android yang bertuliskan pilihan <span class="warning-badge">Batal</span> dan <span class="warning-badge">Instal</span>, pengguna sebaiknya pilih dan tekan tombol <strong>Instal</strong> untuk melanjutkan pemasangan.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <div class="step-number">4</div>
+                <div class="step-text">
+                    <strong>Izin Sumber Tidak Dikenal:</strong> Jika sistem meminta izin khusus, masuk ke menu <em>Setelan/Pengaturan</em> yang muncul di layar, lalu centang aktifkan opsi <strong>"Izinkan dari sumber ini"</strong>. Aplikasi akan langsung terpasang dengan aman.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <div class="footer">
         © 2026 Cermis Audio<br><br>
         <a href="privacy.html">Kebijakan Privasi</a>
@@ -108,17 +363,17 @@
 </div>
 
 <script>
-    // Membaca konfigurasi app dari file JSON statis (hasil buatan build.js)
+    // Membaca file konfigurasi dinamis yang dibuat otomatis oleh build.js
     async function initLandingPage() {
         try {
             const response = await fetch('app-config.json');
             const config = await response.json();
 
-            // 1. Update Link dan Tulisan Versi
+            // Pasang link download dan teks versi dari build.js
             document.getElementById('apk-download-link').href = config.downloadUrl;
             document.getElementById('apk-version-info').innerText = `Versi ${config.version} • Android ${config.minAndroid}`;
 
-            // 2. Suntik Data Terstruktur (SEO Schema) secara dinamis
+            // Inject SEO data terstruktur
             const schema = {
                 "@context": "https://schema.org",
                 "@type": "MobileApplication",
@@ -132,10 +387,9 @@
             document.getElementById('ld-json-schema').textContent = JSON.stringify(schema);
 
         } catch (error) {
-            console.error('Gagal memuat konfigurasi aplikasi:', error);
-            // Fallback jika file JSON gagal dimuat
+            console.error('Gagal mengambil file config, menggunakan pengaturan bawaan:', error);
             document.getElementById('apk-download-link').href = "https://github.com/13011976h/download/releases/";
-            document.getElementById('apk-version-info').innerText = "Versi Terbaru • Android 5.0+";
+            document.getElementById('apk-version-info').innerText = "Versi Terbaru • Android 7.0+";
         }
     }
 
