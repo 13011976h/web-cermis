@@ -1,2 +1,6 @@
 /*
   Access-Control-Allow-Origin: *
+
+/app-ads.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: no-cache, no-store, must-revalidate
