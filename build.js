@@ -7,9 +7,9 @@ const OUTPUT_FILE = path.join(__dirname, 'app-config.json');
 // KONFIGURASI APLIKASI ANDA
 // Cukup ubah bagian ini saat ada pembaruan APK / rilis versi baru di GitHub
 const appConfig = {
-    version: "1.0.1",
+    version: "1.0.2",
     minAndroid: "7.0+",
-    downloadUrl: "https://github.com/13011976h/download/releases/download/v1.0.1/cermis.audio.v1.0.1.apk"
+    downloadUrl: "https://github.com/13011976h/download/releases/download/v1.0.2/cermis.audio.apk"
 };
 
 function generateConfig() {
