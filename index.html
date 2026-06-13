@@ -3,26 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cermis Audio - Cerita Horor, Misteri & Legenda</title>
-    <meta name="description" content="Nikmati berbagai cerita horor, misteri, legenda, dan kisah menyeramkan lengkap dengan audio streaming langsung dari perangkat Android Anda.">
-    <meta name="keywords" content="cermis,audio horor,cerita misteri,cerita horor,legenda,urban legend">
+    <title>Cermis Audio - Aplikasi Cerita Horor, Cerita Mistis, Kisah Seram</title>
+    <!-- Deskripsi diperbarui dengan kata kunci kategori baru -->
+    <meta name="description" content="Kumpulan cermis (cerita mistis) terlengkap. Dengarkan kisah nyata seputar santet, pesugihan, tumbal, pelet, susuk, lelembut, dan arwah penasaran gratis di Android!">
     <meta name="author" content="Cermis Audio">
     <meta name="robots" content="index,follow">
     <meta name="theme-color" content="#ffffff">
     <meta name="google-site-verification" content="fyyuntmSl6YfqmiO9m3M_0zB0HMg44EO03e5hVVNIZc" />
-    <link rel="canonical" href="https://cermis.pages.dev/">
+    <link rel="canonical" href="https://cermis-web.pages.dev/">
     <link rel="icon" href="icon.png">
 
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Cermis Audio">
-    <meta property="og:description" content="Kumpulan cerita horor, misteri, dan legenda lengkap dengan audio streaming.">
+    <meta property="og:title" content="Cermis Audio - Aplikasi Cerita Horor & Cerita Mistis">
+    <meta property="og:description" content="Dengarkan streaming kisah nyata misteri nusantara: santet, pesugihan, susuk, pelet, dan gangguan lelembut.">
     <meta property="og:image" content="https://cermis-web.pages.dev/banner.jpg">
     <meta property="og:url" content="https://cermis-web.pages.dev/">
     <meta property="og:site_name" content="Cermis Audio">
 
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cermis Audio">
-    <meta name="twitter:description" content="Cerita horor dan misteri lengkap dengan audio streaming.">
+    <meta name="twitter:title" content="Cermis Audio - Cerita Seram & Horor Audio">
+    <meta name="twitter:description" content="Dengarkan ribuan cerita mistis, tumbal pesugihan, dan teror arwah penasaran langsung di Android.">
     <meta name="twitter:image" content="https://cermis-web.pages.dev/banner.jpg">
 
     <script type="application/ld+json" id="ld-json-schema"></script>
@@ -60,7 +62,7 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 100px 20px 80px;
+            padding: 100px 20px 40px;
         }
 
         .logo-wrapper {
@@ -119,12 +121,47 @@
             font-weight: 500;
         }
 
+        /* SEO CONTENT SECTION KATEGORI MISTIS */
+        .seo-section {
+            margin-top: 60px;
+            padding: 50px 40px;
+            background: var(--bg-accent);
+            border-radius: 28px;
+            border: 1px solid var(--border-color);
+        }
+        .seo-section h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .seo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 30px;
+        }
+        .seo-block h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+        .seo-block p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
         /* Cards Grid */
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         .card {
@@ -265,10 +302,12 @@
 
         /* Responsive Layout */
         @media(max-width: 768px) {
-            .hero { padding: 60px 10px 50px; }
+            .hero { padding: 60px 10px 40px; }
             h1 { font-size: 38px; }
             .subtitle { font-size: 17px; }
             .download-btn { width: 100%; max-width: 340px; padding: 16px 24px; }
+            .seo-grid { grid-template-columns: 1fr; gap: 20px; }
+            .seo-section { padding: 30px 20px; }
             .card { padding: 24px; }
             .guide-box { padding: 24px; border-radius: 24px; }
         }
@@ -279,15 +318,15 @@
 <div class="container">
     <section class="hero">
         <div class="logo-wrapper">
-            <img src="icon.png" alt="Logo Cermis Audio" class="logo">
+            <img src="icon.png" alt="Aplikasi Cerita Horor Cermis Audio" class="logo">
         </div>
         <h1>Cermis Audio</h1>
         <p class="subtitle">
-            Masuki dunia penuh misteri, legenda, dan kisah-kisah yang membuat bulu kuduk merinding. Nikmati pengalaman membaca dan mendengarkan cerita pilihan langsung dari perangkat Android Anda.
+            Dengarkan ribuan <strong>cerita mistis (cermis)</strong>, kisah misteri, dan <strong>cerita horor</strong> paling menyeramkan secara streaming langsung di HP Android Anda.
         </p>
         
         <a id="apk-download-link" class="download-btn" href="#" target="_blank" rel="noopener noreferrer">
-            Download APK
+            Download APK Cermis Audio
         </a>
 
         <div class="version" id="apk-version-info">
@@ -295,35 +334,69 @@
         </div>
     </section>
 
+    <!-- FOKUS BARU: SEO KONTEN KATEGORI MISTIS NUSANTARA -->
+    <section class="seo-section">
+        <h2>Eksplorasi Cerita Horor & Sisi Kelam Alam Gaib</h2>
+        <p style="color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto 30px; font-size: 16px;">
+            Cermis Audio menyajikan kurasi audio cerita mistis berbasis kisah nyata yang dikelompokkan ke dalam berbagai fenomena supernatural legendaris di Indonesia.
+        </p>
+        
+        <div class="seo-grid">
+            <div class="seo-block">
+                <h3>Kisah Nyata Santet, Pengasihan, & Pelet Kelam</h3>
+                <p>Masuki rekaman audio mencekam yang mengupas bahaya penyalahgunaan ilmu hitam. Aplikasi kami menyediakan kumpulan **cerita horor** tentang teror **santet** kiriman yang merusak kehidupan, rahasia di balik mantra **pelet** penakluk sukma, hingga konsekuensi fatal dari penggunaan **pengasihan** terlarang demi memikat hati manusia secara tidak wajar.</p>
+                <p>Setiap **cerita mistis** dibawakan dengan narasi emosional yang mendalam, memperlihatkan bagaimana tipu daya mistis ini bekerja di tengah masyarakat modern.</p>
+            </div>
+
+            <div class="seo-block">
+                <h3>Tragedi Pesugihan Kuno & Tumbal Nyawa</h3>
+                <p>Misteri kekayaan instan selalu menyisakan kisah kelam yang mengerikan. Dengarkan rentetan **cerita seram** seputar perjanjian gaib sekte **pesugihan** kuno. Pahami bagaimana sebuah keserakahan berujung pada penyerahan **tumbal** nyawa orang-orang terdekat, hingga ritual mengerikan demi harta yang tidak berkah.</p>
+                <p>Semua kisah dikemas dalam format audio streaming interaktif yang membuat Anda seolah berada langsung di lokasi ritual mistis tersebut.</p>
+            </div>
+
+            <div class="seo-block">
+                <h3>Eksistensi Lelembut & Teror Arwah Penasaran</h3>
+                <p>Dunia kita berdampingan dengan dimensi lain yang dihuni oleh entitas tak kasat mata. Temukan audio **cermis** yang menceritakan interaksi manusia dengan bangsa **lelembut**, jin penunggu tempat angker, hingga gangguan **arwah** penasaran yang menuntut balas akibat kematian yang tidak wajar.</p>
+                <p>Efek suara latar yang gelap dan mencekam akan membawa imajinasi Anda menjelajahi batas antara dunia nyata dan dimensi gaib.</p>
+            </div>
+
+            <div class="seo-block">
+                <h3>Rahasia Mistis Susuk, Ajian, & Ilmu Kanuragan</h3>
+                <p>Kupas tuntas mitos dan fakta di balik pemasangan **susuk** kecantikan atau kewibawaan yang menyimpan pantangan gaib mengerikan. Tidak hanya itu, dengarkan pula sejarah dan silsilah **ajian** ilmu warisan leluhur yang disalahgunakan hingga membawa kutukan berdarah bagi keturunannya.</p>
+                <p>Unduh aplikasi **Cermis Audio** sekarang untuk mendengarkan ratusan arsip kisah supranatural nusantara terlengkap langsung dari perangkat Android Anda.</p>
+            </div>
+        </div>
+    </section>
+
     <div class="cards">
         <div class="card">
-            <h2>📚 Koleksi Cerita</h2>
-            <p>Ratusan cerita misteri, horor, urban legend, dan kisah menyeramkan yang dapat dinikmati kapan saja tanpa perlu ribet.</p>
+            <h2>📚 Koleksi Cerita Mistis</h2>
+            <p>Ratusan judul cermis, kisah misteri, cerita horor lawas, hingga urban legend populer yang diperbarui secara berkala.</p>
         </div>
         <div class="card">
-            <h2>🎧 Audio Streaming</h2>
-            <p>Dengarkan cerita favorit secara langsung dengan pemutar audio internal yang sangat hemat kuota, jernih, dan ringan.</p>
+            <h2>🎧 Audio Streaming Seram</h2>
+            <p>Dengarkan petualangan mistis favorit dengan pemutar audio internal yang stabil, suara jernih, dan sangat hemat kuota internet.</p>
         </div>
         <div class="card">
-            <h2>⚡ Cepat & Ringan</h2>
-            <p>Dirancang khusus tanpa sistem database berat agar tetap berjalan lancar dan mulus di berbagai spesifikasi ponsel Android.</p>
+            <h2>⚡ Aplikasi Ringan & Cepat</h2>
+            <p>Dirancang optimal tanpa membebani penyimpanan ponsel, membuat pengalaman streaming audio horor jadi lebih lancar.</p>
         </div>
     </div>
 
     <section class="features">
-        <h2>Fitur Utama</h2>
+        <h2>Fitur Utama Aplikasi Horor Kami</h2>
         <div class="feature-list">
-            <div class="feature">✓ Audio Streaming</div>
-            <div class="feature">✓ Favorit Cerita</div>
-            <div class="feature">✓ Pencarian Cepat</div>
-            <div class="feature">✓ Tampilan Sederhana</div>
-            <div class="feature">✓ Ringan Digunakan</div>
-            <div class="feature">✓ Update Berkala</div>
+            <div class="feature">✓ Audio Streaming Cermis</div>
+            <div class="feature">✓ Favorit Cerita Seram</div>
+            <div class="feature">✓ Pencarian Cepat Kisah Horor</div>
+            <div class="feature">✓ Tampilan Gelap Nyaman</div>
+            <div class="feature">✓ Sangat Ringan Digunakan</div>
+            <div class="feature">✓ Update Konten Berkala</div>
         </div>
     </section>
 
     <section class="install-guide">
-        <h2>Panduan Instalasi APK</h2>
+        <h2>Panduan Instalasi APK Cermis Audio</h2>
         <div class="guide-box">
             
             <div class="guide-step">
@@ -358,30 +431,28 @@
     </section>
 
     <div class="footer">
-        © 2026 Cermis Audio<br><br>
+        © 2026 Cermis Audio - Aplikasi Cerita Horor & Cerita Mistis Indonesia.<br><br>
         <a href="privacy.html">Kebijakan Privasi</a>
     </div>
 </div>
 
 <script>
-    // Membaca file konfigurasi dinamis yang dibuat otomatis oleh build.js
     async function initLandingPage() {
         try {
             const response = await fetch('app-config.json');
             const config = await response.json();
 
-            // Pasang link download dan teks versi dari build.js
             document.getElementById('apk-download-link').href = config.downloadUrl;
             document.getElementById('apk-version-info').innerText = `Versi ${config.version} • Android ${config.minAndroid}`;
 
-            // Inject SEO data terstruktur
+            // Skema metadata schema.org diperbarui agar selaras
             const schema = {
                 "@context": "https://schema.org",
                 "@type": "MobileApplication",
                 "name": "Cermis Audio",
                 "applicationCategory": "EntertainmentApplication",
                 "operatingSystem": "Android",
-                "description": "Aplikasi cerita horor, misteri dan legenda dengan audio streaming.",
+                "description": "Aplikasi streaming audio cermis (cerita mistis), cerita horor, dan kisah seram seputar santet, pesugihan, pelet, tumbal, susuk, dan arwah.",
                 "downloadUrl": config.downloadUrl,
                 "softwareVersion": config.version
             };
